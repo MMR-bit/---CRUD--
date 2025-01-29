@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Manager - Specialist Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Specialist Management</h1>
+    <button id="addSpecialistButton">Add Specialist</button>
+  </header>
+
+  <div id="specialistsList">
+    <!-- Specialist list will be dynamically populated here -->
+  </div>
+
+  <div id="specialistModal" class="modal">
+    <div class="modal-content">
+      <h2 id="modalTitle">Add Specialist</h2>
+      <form id="specialistForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" disabled><br>
+
+        <label for="availableStartTime">Available Start Time:</label>
+        <input type="time" id="availableStartTime" name="availableStartTime" required><br>
+
+        <label for="availableEndTime">Available End Time:</label>
+        <input type="time" id="availableEndTime" name="availableEndTime" required><br>
+
+        <label for="skills">Skills:</label>
+        <select multiple id="skills" name="skills">
+          <!-- Skills options will be populated dynamically -->
+        </select><br>
+
+        <button type="submit">Save Specialist</button>
+      </form>
+      <button class="close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>Interview Management</h1>
+    <button id="addInterviewButton">Add Interview</button>
+  </header>
+
+  <div id="interviewsList">
+    <!-- Interview list will be dynamically populated here -->
+  </div>
+
+  <div id="interviewModal" class="modal">
+    <div class="modal-content">
+      <h2 id="interviewModalTitle">Add Interview</h2>
+      <form id="interviewForm">
+        <label for="applicantName">Applicant Name:</label>
+        <input type="text" id="applicantName" name="applicantName" required><br>
+
+        <label for="applicantId">ID:</label>
+        <input type="text" id="applicantId" name="applicantId" disabled><br>
+
+        <label for="arrivalTime">Arrival Time:</label>
+        <input type="time" id="arrivalTime" name="arrivalTime" required><br>
+
+        <label for="interviewSkills">Skills:</label>
+        <select multiple id="interviewSkills" name="interviewSkills">
+          <!-- Skills options will be populated dynamically -->
+        </select><br>
+
+        <button type="submit">Save Interview</button>
+      </form>
+      <button class="close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
